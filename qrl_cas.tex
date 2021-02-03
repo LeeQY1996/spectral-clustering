@@ -1,0 +1,150 @@
+%!TEX program = pdflatex
+%\documentclass[onecolumn,amsmath,amssymb]
+\documentclass[superscriptaddress,twocolumn,notitlepage,pra]{revtex4-1}
+\usepackage[colorlinks=true,citecolor=blue,urlcolor=black]{hyperref}
+%\renewcommand*\thesection{\arabic{section}}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{subfigure}
+
+
+\newtheorem{definition}{Definition}%[section]
+\newtheorem{theorem}{Theorem}%[section]
+\newtheorem{example}{Example}%[section]
+\newtheorem{lemma}{Lemma}%[section]
+\newtheorem{remark}{Remark}%[section]
+\newtheorem{proposition}{Proposition}%[section]
+\newtheorem{corollary}{Corollary}%[section]
+\newtheorem{conjecture}{Conjecture}%[section]
+\newtheorem{result}{Result}%[section]
+%\usepackage{ifpdf}
+
+%\renewcommand*\thesection{\arabic{section}}
+
+%%% auxilliary definitions
+\def\su{\mathfrak{su}}
+\def\u{\mathfrak{u}}
+\def\SU{\mathfrak{SU}}
+\def\U{\mathfrak{U}}
+\definecolor{Red}{rgb}{1,0,0}
+\def\vec#1{{\bm #1}}
+\def\co#1{{\textbf{#1}}}
+\def\op#1{#1}
+\def\Re{\mathrm{Re}}
+\def\ket#1{| #1 \rangle}
+\def\bra#1{\langle #1 |}
+\def\ip#1#2{\langle #1 | #2 \rangle}
+\def\lket#1{| #1 \rangle\!\rangle}
+\def\lbra#1{\langle\!\langle #1 |}
+\def\lip#1#2{\langle\!\langle #1 \mid #2 \rangle\!\rangle}
+\def\comm#1#2{\left\llbracket #1, #2 \right\rrbracket}
+\def\ave#1{\langle #1 \rangle}
+\def\norm#1{\| #1 \|}
+\def\d{\partial}
+\def\o{\bm{\omega}}
+\def\RR{\mathbb{R}}
+\def\ZZ{\mathbb{Z}}
+%% math operators
+\def\diag{\operatorname{diag}}
+\def\diam{\operatorname{diam}}
+\def\pinv{\operatorname{pinv}}
+\def\dim{\operatorname{dim}}
+\def\supp{\operatorname{supp}}
+\def\rank{\operatorname{rank}}
+\def\Span{\operatorname{span}}
+\def\Sgn{\operatorname{Sgn}}
+\def\spec{\operatorname{spec}}
+\def\Tr{\operatorname{Tr}}
+\def\Ad{\operatorname{Ad}}
+\def\poly{\operatorname{poly}}
+\def\policy{\operatorname{policy}}
+\def\tot{\operatorname{tot}}
+\def\CNOT{\operatorname{CNOT}}
+\def\PE{\operatorname{PE}}
+%\mathcal symbols
+\def\OO{\mathop{\bf O}\nolimits}
+\def\Lb{\mathop{\bf L}\nolimits}
+\def\Db{\mathop{\bf D}\nolimits}
+\def\A{\mathcal{A}}
+\def\B{\mathcal{B}}
+\def\C{\mathcal{C}}
+\def\D{\mathcal{D}}
+\def\E{\mathcal{E}}
+\def\F{\mathcal{F}}
+\def\G{\mathcal{G}}
+\def\H{\mathcal{H}}
+\def\I{\mathcal{I}}
+\def\L{\mathcal{L}}
+\def\M{\mathcal{M}}
+\def\N{\mathcal{N}}
+\def\O{\mathcal{O}}
+\def\P{\mathcal{P}}
+\def\Q{\mathcal{Q}}
+\def\T{\mathcal{T}}
+\def\R{\mathbb{R}}
+\def\J{\mathcal{J}}
+%% blackboard symbols
+\def\ONE{\mathbb{I}}
+\def\uu{\mathbb{u}}
+\def\UU{\mathbb{U}}
+\def\GL{\mathbb{GL}}
+\def\sp{\mathbb{sp}}
+\def\gl{\mathbb{gl}}
+\def\so{\mathbb{so}}
+\def\o{\bm{\omega}}
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+
+%% mathfrak symbols
+\def\AA{\mathfrak{A}}
+\def\BB{\mathfrak{B}}
+\def\DD{\mathfrak{D}}
+\def\EE{\mathfrak{E}}
+%% other shortcuts
+\def\xs{\vec{x}\cdot\vec{\sigma}}
+\def\sx{\op{\sigma}_x}
+\def\sy{\op{\sigma}_y}
+\def\sz{\op{\sigma}_z}
+\def\eps{\epsilon}
+\def\EEss{\EE_{\rm ss}}
+\def\EEinv{\EE_{\rm inv}}
+\def\EEcc{\EE_{\rm cc}}
+\def\HS{\mathop{\rm HS}}
+\def\TR{\mathop{\rm TR}}
+\def\ss{\rm ss}
+
+\def\a{\alpha}
+
+
+
+\begin{document}
+
+\title{Quantum reinforcement learning in continuous action space}
+
+\author{Shaojun Wu}
+\affiliation{Institute of  Fundamental and Frontier Sciences, University of Electronic Science and Technology of China, Chengdu, 610051, China}
+
+
+
+\begin{abstract}
+
+Quantum mechanics has the potential to speedup machine learning algorithms, including reinforcement learning(RL). Previous works have shown that quantum algorithms can efficiently solve RL problems in discrete action space, but could become intractable in continuous domain, suffering notably from the curse of dimensionality due to discretization. In this work, we propose an alternative quantum circuit design that can solve RL problems in continuous action space without the dimensionality problem. Specifically, we propose a quantum version of the Deep Deterministic Policy Gradient method constructed from quantum neural networks, with the potential advantage of obtaining an exponential speedup in gate complexity for each iteration. As applications, we demonstrate that quantum control tasks, including the eigenvalue problem and quantum state generation, can be formulated as sequential decision problems and solved by our method.
+
+
+
+\end{abstract}
+
+\maketitle
+
+
+
+\end{document}
